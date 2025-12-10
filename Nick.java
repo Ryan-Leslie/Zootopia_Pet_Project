@@ -103,5 +103,5 @@ public class Nick {
         System.out.println("Nick had a great time playing!");
         checkStats(); // Display updated stats
     }
-
+    // Test
 }
