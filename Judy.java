@@ -46,50 +46,50 @@ public class Judy {
     }
 
     // Method for Judy to eat and restore health and energy
-public void eat() {
-    System.out.println("Judy is enjoying a healthy meal!");
-    health += 10; // Eating restores health
-    energy += 15; // Eating restores energy
+    public void eat() {
+        System.out.println("Judy is enjoying a healthy meal!");
+        health += 10; // Eating restores health
+        energy += 15; // Eating restores energy
 
-    // Ensure stats don't exceed maximum values
-    if (health > 100) health = 100;
-    if (energy > 100) energy = 100;
+        // Ensure stats don't exceed maximum values
+        if (health > 100) health = 100;
+        if (energy > 100) energy = 100;
 
-    System.out.println("Judy feels energized after eating!");
-    checkStats(); // Display updated stats
-}
+        System.out.println("Judy feels energized after eating!");
+        checkStats(); // Display updated stats
+    }
 
-// Method for Judy to sleep and restore energy, health, and happiness
-public void sleep() {
-    System.out.println("Judy is taking a well-deserved nap.");
-    energy += 20; // Sleeping restores energy
-    health += 5; // Sleeping slightly improves health
-    happiness += 5; // Sleeping makes Judy happier
+    // Method for Judy to sleep and restore energy, health, and happiness
+    public void sleep() {
+        System.out.println("Judy is taking a well-deserved nap.");
+        energy += 20; // Sleeping restores energy
+        health += 5; // Sleeping slightly improves health
+        happiness += 5; // Sleeping makes Judy happier
 
-    // Ensure stats don't exceed maximum values
-    if (health > 100) health = 100;
-    if (energy > 100) energy = 100;
-    if (happiness > 100) happiness = 100;
+        // Ensure stats don't exceed maximum values
+        if (health > 100) health = 100;
+        if (energy > 100) energy = 100;
+        if (happiness > 100) happiness = 100;
 
-    System.out.println("Judy feels refreshed after sleeping!");
-    checkStats(); // Display updated stats
-}
+        System.out.println("Judy feels refreshed after sleeping!");
+        checkStats(); // Display updated stats
+    }
 
-// Method for Judy to play and increase happiness
-public void play() {
-    System.out.println("Judy is playing and having a great time!");
-    happiness += 20; // Playing makes Judy much happier
-    energy -= 10; // Playing uses up energy
-    health -= 5; // Playing too much can slightly reduce health
+    // Method for Judy to play and increase happiness
+    public void play() {
+        System.out.println("Judy is playing and having a great time!");
+        happiness += 20; // Playing makes Judy much happier
+        energy -= 10; // Playing uses up energy
+        health -= 5; // Playing too much can slightly reduce health
 
-    // Ensure stats don't drop below zero or exceed maximum values
-    if (health < 0) health = 0;
-    if (energy < 0) energy = 0;
-    if (happiness > 100) happiness = 100;
+        // Ensure stats don't drop below zero or exceed maximum values
+        if (health < 0) health = 0;
+        if (energy < 0) energy = 0;
+        if (happiness > 100) happiness = 100;
 
-    System.out.println("Judy had a lot of fun playing!");
-    checkStats(); // Display updated stats
-}
+        System.out.println("Judy had a lot of fun playing!");
+        checkStats(); // Display updated stats
+    }
     // Method to check and display the current stats
     public void checkStats() {
         System.out.println("Current Stats:");
