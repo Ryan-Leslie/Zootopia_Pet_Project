@@ -1,8 +1,10 @@
 public class Gary {
+
     private int health;
     private int energy;
     private int happiness;
     private int temperature;
+    
 
     // Default constructor
     public Gary() {
@@ -61,10 +63,10 @@ public class Gary {
         System.out.println("You chose to do nothing. Gary is feeling neglected...");
         
         // Decrease attributes
-        health -= 5;
-        energy -= 5;
-        happiness -= 10;
-        temperature -= 2;
+        this.health -= 5;
+        this.energy -= 5;
+        this.happiness -= 10;
+        this.temperature -= 2;
 
         // Check if any stat goes below 0
         if (health < 0 || energy < 0 || happiness < 0 || temperature < 0) {
@@ -97,9 +99,9 @@ public class Gary {
     // Method for Gary to eat and regain energy and health
     public void eat() {
         System.out.println("Gary is eating his favorite food!");
-        health += 10; // Eating improves health
-        energy += 15; // Eating restores energy
-        happiness += 5; // Eating makes Gary a little happier
+        this.health += 10; // Eating improves health
+        this.energy += 15; // Eating restores energy
+        this.happiness += 5; // Eating makes Gary a little happier
 
         // Ensure stats don't exceed maximum values (e.g., 100)
         if (health > 100) health = 100;
@@ -113,9 +115,9 @@ public class Gary {
     // Method for Gary to sleep and regain energy
     public void sleep() {
         System.out.println("Gary is sleeping peacefully");
-        energy += 20; // Sleeping restores energy
-        health += 5; // Sleeping slightly improves health
-        happiness += 5; // Sleeping makes Gary happier
+        this.energy += 20; // Sleeping restores energy
+        this.health += 5; // Sleeping slightly improves health
+        this.happiness += 5; // Sleeping makes Gary happier
 
         // Ensure stats don't exceed maximum values (e.g., 100)
         if (health > 100) health = 100;
@@ -129,9 +131,9 @@ public class Gary {
     // Method for Gary to play and increase happiness
     public void play() {
         System.out.println("Gary is playing and having fun!");
-        happiness += 20; // Playing makes Gary much happier
-        energy -= 10; // Playing uses up energy
-        health -= 5; // Playing too much can slightly reduce health
+        this.happiness += 20; // Playing makes Gary much happier
+        this.energy -= 10; // Playing uses up energy
+        this.health -= 5; // Playing too much can slightly reduce health
 
         // Ensure stats don't drop below zero
         if (health < 0) health = 0;
