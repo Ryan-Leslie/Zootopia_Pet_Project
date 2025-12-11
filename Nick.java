@@ -48,6 +48,45 @@ public class Nick {
         this.energy -= 5;
         this.happiness -= 5;
         // Health remains unchanged
+        validateStats();
+    }
+
+    // Eat pawpsicles to increase energy and happiness
+    public void eatPawpsicle(int num) {
+        System.out.println("Nick is eating a pawpsicle...");
+        if (num <= 3 && num > 0) {
+            this.energy += num * 5; // Each pawpsicle gives 5 energy
+            this.happiness += num * 3; // Each pawpsicle gives 3 happiness
+        }
+        else {
+            System.out.println("Nick can only eat up to 3 pawpsicles at a time!");
+        }
+        validateStats();
+    }
+
+    // Check if stats are within valid range
+    public void validateStats() {
+        // Ensure stats don't drop below zero
+        if (health < 0) health = 0;
+        if (energy < 0) energy = 0;
+        if (happiness > 100) happiness = 100;
+    }
+
+    // Method to sleep
+    public void sleep() {
+        System.out.println("Nick is sleeping...");
+        this.energy += 30;
+        this.health += 10;
+        validateStats();
+    }
+
+    // Method to eat
+    public void eat() {
+        System.out.println("Nick is eating...");
+        this.energy += 15;
+        this.health += 5;
+        this.happiness -= 1;
+        validateStats();
     }
 
     // Method to check and display the current stats
