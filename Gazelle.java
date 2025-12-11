@@ -2,6 +2,7 @@ public class Gazelle {
     private int health = 100;
     private int energy = 100;
     private int happiness = 100;
+    private int speed = 80;
 
     // No-argument constructor
     public Gazelle() {
