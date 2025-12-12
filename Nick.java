@@ -43,6 +43,7 @@ public class Nick {
     }
 
     // Method to simulate doing nothing
+    @Override;
     public void doNothing() {
         // Doing nothing decreases energy and happiness slightly
         this.energy -= 5;
@@ -95,5 +96,21 @@ public class Nick {
         System.out.println("Health: " + this.health);
         System.out.println("Energy: " + this.energy);
         System.out.println("Happiness: " + this.happiness);
+    }
+
+     // Method for Nick to play and increase happiness
+    public void play() {
+        System.out.println("Nick is playing and having fun!");
+        this.happiness += 20; // Playing makes Nick much happier
+        this.energy -= 10; // Playing uses up energy
+        this.health -= 5; // Playing too much can slightly reduce health
+
+        // Ensure stats don't drop below zero
+        if (health < 0) health = 0;
+        if (energy < 0) energy = 0;
+        if (happiness > 100) happiness = 100;
+
+        System.out.println("Nick had a great time playing!");
+
     }
 }
