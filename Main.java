@@ -16,7 +16,7 @@ public class Main {
         System.out.println("1. Gary");
         System.out.println("2. Gazelle");
         System.out.println("3. Judy");
-        System.out.println("4. Nick");
+        System.out.println("4. Nick"); 
 
         int choice = scanner.nextInt();
         Animal animal;
