@@ -3,7 +3,7 @@
  * This class provides methods to interact with Gary, such as eating, sleeping, and playing.
  * @author Amirah B, Ryan L, Vivi L, Eva C, Copilot
  */
-public class Gary {
+public class Gary implements Animal {
 
 
     private int health;
@@ -45,6 +45,7 @@ public class Gary {
      * 
      * @return The current health level.
      */    
+    @Override
     public int getHealth() {
         return health;
     }
@@ -54,6 +55,7 @@ public class Gary {
      * 
      * @param health The new health level to set.
      */
+    @Override
     public void setHealth(int health) {
         this.health = health;
     }
@@ -63,6 +65,7 @@ public class Gary {
      * 
      * @return The current energy level.
      */
+    @Override
     public int getEnergy() {
         return energy;
     }
@@ -72,15 +75,17 @@ public class Gary {
      * 
      * @param energy The new energy level to set.
      */
+    @Override
     public void setEnergy(int energy) {
         this.energy = energy;
     }
     
     /**
-     * Sets the energy level of Gary.
+     * Gets the current happiness level of Gary.
      * 
-     * @param energy The new energy level to set.
+     * @return The current happiness level.
      */
+    @Override
     public int getHappiness() {
         return happiness;
     }
@@ -90,6 +95,7 @@ public class Gary {
     * 
     * @param happiness The new happiness level to set.
     */
+    @Override
     public void setHappiness(int happiness) {
         this.happiness = happiness;
     }
@@ -116,6 +122,7 @@ public class Gary {
     * Method to decrease Gary's stats when doing nothing.
     * Doing nothing decreases health, energy, happiness, and temperature.
     */
+    @Override
     public void doNothing() {
         System.out.println("You chose to do nothing. Gary is feeling neglected...");
         
@@ -130,6 +137,7 @@ public class Gary {
     /**
      * Displays Gary's current stats, including health, energy, happiness, and temperature.
     */
+    @Override
     public void checkStats() {
         System.out.println("Health: " + health);
         System.out.println("Energy: " + energy);
@@ -161,8 +169,9 @@ public class Gary {
      * Eating improves Gary's health, restores energy, and slightly increases happiness.
      * Ensures that health, energy, and happiness do not exceed their maximum values (100).
      */
+    @Override
     public void eat() {
-        System.out.println("Gary is eating his favorite food!");
+        System.out.println("Gary is eating his favorite sweet treat to make him feel better!");
         this.health += 10; // Eating improves health
         this.energy += 15; // Eating restores energy
         this.happiness += 5; // Eating makes Gary a little happier
@@ -181,6 +190,7 @@ public class Gary {
      * Sleeping restores Gary's energy, slightly improves health, and increases happiness.
      * Ensures that health, energy, and happiness do not exceed their maximum values (100).
      */
+    @Override
     public void sleep() {
         System.out.println("Gary is sleeping peacefully");
         this.energy += 20; // Sleeping restores energy
@@ -201,8 +211,9 @@ public class Gary {
      * Playing makes Gary much happier but uses up energy and slightly reduces health.
      * Ensures that stats do not drop below zero.
      */
+    @Override
     public void play() {
-        System.out.println("Gary is playing and having fun!");
+        System.out.println("Gary is having fun playing with his new friend!");
         this.happiness += 20; // Playing makes Gary much happier
         this.energy -= 10; // Playing uses up energy
         this.health -= 5; // Playing too much can slightly reduce health
@@ -212,7 +223,7 @@ public class Gary {
         if (energy < 0) energy = 0;
         if (happiness > 100) happiness = 100;
 
-        System.out.println("Gary had a great time playing!");
+        System.out.println("Gary had a great time playing with you!");
 
     }
 
