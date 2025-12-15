@@ -69,11 +69,13 @@ public class Nick implements Animal {
     /** Sets the happiness of Nick.
      * @param happiness the happiness value to set
      */
+    @Override
     public void setHappiness(int happiness) {
         this.happiness = happiness;
     }
 
     /** Simulates Nick doing nothing, decreasing energy and happiness. */
+    @Override
     public void doNothing() {
         // Doing nothing decreases energy and happiness slightly
         this.energy -= 5;
@@ -106,6 +108,7 @@ public class Nick implements Animal {
     }
 
     /** Allows Nick to sleep, increasing energy and health. */
+    @Override
     public void sleep() {
         System.out.println("Nick is sleeping and getting rest!");
         this.energy += 30;
@@ -114,6 +117,7 @@ public class Nick implements Animal {
     }
 
     /** Allows Nick to eat, increasing energy, health, and slightly decreasing happiness. */
+    @Override
     public void eat() {
         System.out.println("Nick is eating!");
         this.energy += 15;
@@ -123,6 +127,7 @@ public class Nick implements Animal {
     }
 
     /** Displays Nick's current stats. */
+    @Override
     public void checkStats() {
         System.out.println("Current Stats:");
         System.out.println("Health: " + this.health);
@@ -131,6 +136,7 @@ public class Nick implements Animal {
     }
 
      /** Allows Nick to play, increasing happiness and decreasing energy and health. */
+    @Override
     public void play() {
         System.out.println("Nick is playing and having fun!");
         this.happiness += 20; // Playing makes Nick much happier
