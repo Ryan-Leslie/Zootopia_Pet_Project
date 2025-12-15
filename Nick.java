@@ -61,6 +61,7 @@ public class Nick implements Animal {
     /** Gets the happiness of Nick.
      * @return the happiness value
      */
+    @Override
     public int getHappiness() {
         return happiness;
     }
