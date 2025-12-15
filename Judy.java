@@ -57,6 +57,7 @@ public class Judy implements Animal {
     }
 
     /** Allows Judy to sleep, increasing energy and health. */
+    @Override
     public void sleep() {
         System.out.println("Judy is sleeping...");
         this.energy += 30;
@@ -64,6 +65,7 @@ public class Judy implements Animal {
     }
 
     /** Allows Judy to eat, increasing energy and health, slightly decreasing happiness. */
+    @Override
     public void eat() {
         System.out.println("Judy is eating...");
         this.energy += 15;
@@ -72,6 +74,7 @@ public class Judy implements Animal {
     }
 
     /** Simulates Judy doing nothing, decreasing energy, health, and happiness. */
+    @Override
     public void doNothing() {
         System.out.println("Judy is doing nothing and getting bored...");
         this.energy -= 2;
@@ -117,6 +120,7 @@ public class Judy implements Animal {
     }
 
     /** Allows Judy to play, increasing happiness and decreasing energy and health. */
+    @Override
     public void play() {
         System.out.println("Judy is playing and having fun!");
         this.happiness += 20; // Playing makes Judy much happier
@@ -132,6 +136,7 @@ public class Judy implements Animal {
     }
 
     /** Displays Judy's current stats. */
+    @Override
     public void checkStats() {
         System.out.println("Current Stats:");
         System.out.println("Health: " + this.health);
