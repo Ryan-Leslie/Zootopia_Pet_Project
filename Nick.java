@@ -43,7 +43,6 @@ public class Nick {
     }
 
     // Method to simulate doing nothing
-    @Override;
     public void doNothing() {
         // Doing nothing decreases energy and happiness slightly
         this.energy -= 5;
