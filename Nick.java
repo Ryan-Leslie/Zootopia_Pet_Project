@@ -29,6 +29,7 @@ public class Nick implements Animal {
     /** Gets the health of Nick.
      * @return the health value
      */
+    @Override
     public int getHealth() {
         return health;
     }
@@ -36,6 +37,7 @@ public class Nick implements Animal {
     /** Sets the health of Nick.
      * @param health the health value to set
      */
+    @Override
     public void setHealth(int health) {
         this.health = health;
     }
@@ -43,6 +45,7 @@ public class Nick implements Animal {
     /** Gets the energy of Nick.
      * @return the energy value
      */
+    @Override
     public int getEnergy() {
         return energy;
     }
@@ -50,6 +53,7 @@ public class Nick implements Animal {
     /** Sets the energy of Nick.
      * @param energy the energy value to set
      */
+    @Override
     public void setEnergy(int energy) {
         this.energy = energy;
     }
